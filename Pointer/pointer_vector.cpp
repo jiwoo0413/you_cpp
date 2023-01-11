@@ -6,7 +6,7 @@ using namespace std;
 int main() { //reference
 	int num0 = 0;
 	int* num1 = &num0;
-	int& num2 = num0; //ÂüÁ¶
+	int& num2 = num0; //ì°¸ì¡°
 	
 	cout << num0 << endl;
 	cout << *num1 << endl;
@@ -19,7 +19,7 @@ int main() { //reference
 	cout << num2 << endl;
 	cout << endl;
 
-	int* const num3 = &num0; //ÂüÁ¶¶û ¶È°°À½(°¡¸®Å°´Â ÁÖ¼Ò¸¦ ¸ø ¹Ù²Û´Ù)
+	int* const num3 = &num0; //ì°¸ì¡°ëž‘ ë˜‘ê°™ìŒ(ê°€ë¦¬í‚¤ëŠ” ì£¼ì†Œë¥¼ ëª» ë°”ê¾¼ë‹¤)
 }
 
 //int main() {
@@ -56,7 +56,7 @@ int main() { //reference
 
 
 //int main() {
-//	vector<int> vec(5); //vec(5, 100)ÇÏ¸é 100À¸·Î ³ª¿È(100À¸·Î ÃÊ±âÈ­)
+//	vector<int> vec(5); //vec(5, 100)í•˜ë©´ 100ìœ¼ë¡œ ë‚˜ì˜´(100ìœ¼ë¡œ ì´ˆê¸°í™”)
 //
 //	for (int num : vec) {
 //		cout << num << ' ';
@@ -85,7 +85,7 @@ int main() { //reference
 //	cout << endl;
 //
 //	cout << vec.size() << endl;
-//	vec.push_back(0); //0Àº µÚ¿¡ ¿Í¾ßÇÏ´Â ¼ö
+//	vec.push_back(0); //0ì€ ë’¤ì— ì™€ì•¼í•˜ëŠ” ìˆ˜
 //	cout << vec.size() << endl;
 //
 //	for (int num : vec) {
@@ -104,7 +104,7 @@ int main() { //reference
 //	int* p = &num;
 //	cout << *p << endl;
 //	void* vp = p;
-//	int* p0 = (int*)vp; //ÇüÅÂ°¡ ÀÌ»óÇØ
+//	int* p0 = (int*)vp; //í˜•íƒœê°€ ì´ìƒí•´
 //	cout << *p0 << endl;
 //
 //	int* P = (int*)malloc(sizeof(int) * 3);
@@ -112,7 +112,7 @@ int main() { //reference
 
 
 //int main() {
-//	int* p = nullptr; //¾²Áö¾Ê´Â Æ÷ÀÎÅÍ´Â nullptr·Î ÃÊ±âÈ­
+//	int* p = nullptr; //ì“°ì§€ì•ŠëŠ” í¬ì¸í„°ëŠ” nullptrë¡œ ì´ˆê¸°í™”
 //
 //}
 
@@ -125,7 +125,7 @@ int main() { //reference
 //	arr[0] = 1;
 //	cout << arr[0] << endl;
 //
-//	delete[] arr; //µ¿ÀûÀ¸·Î ¹è¿­À» ÇÒ´çÇÏ¸é ÃÊ±âÈ­ÇØ¾ßµÊ ¾ÆÁÖ Áß¿ä!! *****Áß°£ ¹®Á¦*****
+//	delete[] arr; //ë™ì ìœ¼ë¡œ ë°°ì—´ì„ í• ë‹¹í•˜ë©´ ì´ˆê¸°í™”í•´ì•¼ë¨ ì•„ì£¼ ì¤‘ìš”!! *****ì¤‘ê°„ ë¬¸ì œ*****
 //}
 
 
@@ -133,22 +133,22 @@ int main() { //reference
 //int main() {
 //	int num[] = { 1, 2, 3 };
 //	cout << num << endl;
-//	int* pNum = num; //¿Ö ÀÌ°Å Ä¡¸é ¾ÈÄ¥ ¶§¶û ÁÖ¼Ò ´Ù¸£°Ô ³ª¿Ã±î??
+//	int* pNum = num; //ì™œ ì´ê±° ì¹˜ë©´ ì•ˆì¹  ë•Œëž‘ ì£¼ì†Œ ë‹¤ë¥´ê²Œ ë‚˜ì˜¬ê¹Œ??
 //
 //	cout << pNum[0] << endl;
 //	cout << pNum[1] << endl;
 //	cout << pNum[2] << endl;
-//	cout << endl; //ÁÙ¹Ù²Þ
+//	cout << endl; //ì¤„ë°”ê¿ˆ
 //
 //	cout << *(pNum) << endl;
 //	cout << *(pNum + 1) << endl;
 //	cout << *(pNum + 2) << endl;
-//	cout << endl; //ÁÙ¹Ù²Þ
+//	cout << endl; //ì¤„ë°”ê¿ˆ
 //	
 //	cout << pNum << endl;
 //	cout << pNum + 1 << endl;
 //	cout << pNum + 2 << endl;
-//	cout << endl; //ÁÙ¹Ù²Þ
+//	cout << endl; //ì¤„ë°”ê¿ˆ
 //
 //	cout << *pNum << endl;
 //	pNum++;
@@ -162,16 +162,16 @@ int main() { //reference
 //
 //	int num1 = 20;
 //	pNum0 = &num1;
-//	// *pNum0 = 30; ¾ÈµÊ
+//	// *pNum0 = 30; ì•ˆë¨
 //
 //	int* const pNum1 = &num0;
 //	*pNum1 = 30;
-//	//pNum1 = &num0; ¾ÈµÊ
+//	//pNum1 = &num0; ì•ˆë¨
 //	cout << *pNum1 << endl;
 //
 //	const int* const pNmu3 = &num0;
-//	//*pNum3 = 30; ¾ÈµÊ
-//	//pNum3 = &num1; ¾ÈµÊ
+//	//*pNum3 = 30; ì•ˆë¨
+//	//pNum3 = &num1; ì•ˆë¨
 //}
 
 
@@ -181,7 +181,7 @@ int main() { //reference
 //	double d;
 //};
 
-//int main() {    //Æ÷ÀÎÅÍµµ µ¥ÀÌÅÍ Å¸ÀÔÀ» Á¦´ë·Î ÁöÁ¤ÇØÁà¾ßµÊ ±×·¡¾ß °ªÀÌ Á¦´ë·Î ³ª¿È
+//int main() {    //í¬ì¸í„°ë„ ë°ì´í„° íƒ€ìž…ì„ ì œëŒ€ë¡œ ì§€ì •í•´ì¤˜ì•¼ë¨ ê·¸ëž˜ì•¼ ê°’ì´ ì œëŒ€ë¡œ ë‚˜ì˜´
 //	Union u; 
 //
 //	int* ip = (int*)&u;
